@@ -1,0 +1,157 @@
+div#home-container.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 32px;
+    padding-bottom: 0px;
+    article {
+        border: 0px solid black;
+        border-bottom-width: 1px;
+        padding: 0px;
+        margin: 0px 0px 0px;
+        width: 100%;
+        section {
+            border-bottom: 1px solid grey;
+            padding: 32px 0px 32px;
+            h2 {
+                font-size: 40px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            h4 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            blockquote {
+                color: white;
+            }
+            &#tagline {
+                padding: 60px 0px 0px;
+            }
+        }
+        section {
+            div#postcard {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                h2 { 
+                    flex-basis: 100%; 
+                    font-size: calc(12px + (32 - 12) * ((100vw - 300px) / (800 - 300)));
+                    text-align: center;
+                    line-height: 1.15;
+                    span.bigger {
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        section {
+            div#allies-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                a.ally {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    text-align: center;
+                    width: 100%;
+                    max-width: 240px;
+                    span.ally-img {
+                        display: block;
+                        background-size: 120%;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        border: 4px solid $brightpink;
+                        border-radius: 50%;
+                        height: 120px;
+                        width: 120px;
+                        transition: .2s border ease-in-out;
+                    }
+                    h3 { margin: 8px auto 40px;}
+                    &:hover {
+                        color: $almostwhite;
+                        span.ally-img {
+                            border-color: $almostwhite;
+                            transition: .2s border ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    aside {
+        margin-bottom: 40px;
+        width: 100%;
+        section#demands-short {
+            padding: 40px 0px 32px;
+            margin: 0 auto;
+            max-width: 400px;
+            h2 {
+                font-size: 42px;
+            }
+            ul {
+                list-style: none;
+                padding: 0 12px;
+                margin: 0 auto;
+                li {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        section#fb-calendar { margin-bottom: 40px; }
+        #can_embed_form_inner h2 { display: none; }
+    }
+}
+@media only screen and (min-width: $tablet){
+    div#home-container.inner {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 00px;
+        article {
+            border-right-width: 1px;
+            border-bottom-width: 0px;
+            padding: 0px 24px 0px 0px;
+            margin: 0 24px 0px 0px;
+            width: 66%;
+            section:last-child {
+                border-bottom-width: 0px;
+            }
+            section {
+                div#postcard {
+                    h2 { 
+                        font-size: calc(21px + (32 - 21) * ((100vw - 800px) / (1140 - 800)));
+                    }
+                }
+            }
+        }
+        aside {
+            width: 33%;
+        }
+    }
+}
+@media only screen and (min-width: $small-desktop){
+    div#home-container.inner {
+        article {
+            section {
+                div#postcard {
+                    h2 { 
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

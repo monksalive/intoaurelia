@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body class="{{page.hero-classes}}">
+    {% include header.html %}
+    {% include hero.html %}
+    <main class="{{page.hero-classes}} {{page.bkgdimg-class}}">
+      <article>
+        {{ content }}
+      </article>
+      
+    </main>
+  </body>
+  {% include footer.html %}
+</html>

@@ -1,0 +1,141 @@
+//colors
+$color_0: $brightpink;
+$color_btn: transparent;
+$color_text: black;
+$color_shadow: #000;
+$color_bg: transparent;
+$color_hover_bg: #ccc;
+$color_hover_text: #222;
+
+.xrsfbay_mobile_menu {
+	font-size: 16px;
+	box-sizing: border-box;
+	background: $color_bg;
+	border: 1px solid transparent;
+	padding: 0px;
+	margin-top: -6px;
+	width: 100vw;
+	transition: .3s all ease-in-out;
+	* {
+		box-sizing: border-box;
+	}
+	.xrsfbay_mobile_menutxt {
+		color: $color_text;
+		font-weight: bold;
+		text-shadow: 0 1px 3px $color_shadow;
+	}
+	.xrsfbay_mobile_icon-bar {
+		background-color: $color_0;
+		box-shadow: 0px 0px 0px transparent;
+		transition: .3s all ease-in-out;
+	}
+	.xrsfbay_mobile_open {
+		.nav-sub-arrow { 
+			transform: rotate(-180deg);
+			transition: .2s all ease-in-out;
+		}
+		.xrsfbay_mobile_icon-bar:first-child {
+			background-color: $brightpink;
+			transform: rotate(-45deg);
+			transform-origin: center center;
+			margin-top: 6px;
+			margin-bottom: -2px;
+			transition: .3s all ease-in-out;
+		}
+		.xrsfbay_mobile_icon-bar:nth-child(2) {
+			display: none;
+		}
+		.xrsfbay_mobile_icon-bar:last-child {
+			background-color: $brightpink;
+			transform: rotate(45deg);
+			transform-origin: center center;
+			margin-top: -2px;
+			transition: .3s all ease-in-out;
+		}
+	}
+	.mobile-logo {
+		display: none;
+		position: absolute;
+		top: -6px;
+		left: -3px;
+		img { max-width: 100px; }
+	}
+	&.opened {
+		background: #fff;
+		background-position: 6px 6px;
+		height: 100vh;
+		overflow: scroll;
+		transition: .3s all ease-in-out;
+		.xrsfbay_mobile_btn { position: fixed; top: 0px; right: 0px; }
+		.mobile-logo {
+			display: block;
+		}
+	}
+}
+.xrsfbay_mobile_btn {
+	margin: 20px 6px;
+	text-decoration: none;
+	text-shadow: 0 0px 0px $color_0;
+	background-color: $color_btn;
+}
+.xrsfbay_mobile_nav {
+	color: $color_text;
+	margin: 56px 0 0 12px;
+	padding: 0;
+	font-size: 0.875em;
+	list-style: none;
+	overflow: hidden;
+	ul {
+		list-style: none;
+		overflow: hidden;
+		padding: 0;
+		margin: 0 0 0 20px;
+	}
+	.xrsfbay_mobile_row {
+		padding: 6px 15px;
+		&:hover {
+			background: $color_hover_bg;
+			color: $color_text;
+		}
+		+ .sub-menu a {
+			color: $deepblue;
+		}
+	}
+	a {
+		padding: 5px 10px;
+		margin: 2px 5px;
+		text-decoration: none;
+		color: $color_text;
+		&:hover {
+			background: $color_hover_bg;
+			color: $color_hover_text;
+		}
+	}
+	.xrsfbay_mobile_txtnode {
+		margin-left: 15px;
+	}
+	.xrsfbay_mobile_item a {
+		padding: 0;
+		margin: 0;
+	}
+	.xrsfbay_mobile_parent-link a {
+		padding: 0;
+		margin: 0;
+	}
+}
+.xrsfbay_mobile_brand {
+	color: $color_text;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 7px 12px;
+	height: 44px;
+}
+
+// sticky nav
+.persist .xrsfbay_mobile_icon-bar { background-color: $brightpink; }
+
+@media only screen and (min-width:$tablet){
+	.xrsfbay_mobile_menu {
+		display:  none;
+	}
+}

@@ -1,0 +1,88 @@
+.xrsfbay_mobile_btn {
+	position: relative;
+	display: block;
+	vertical-align: middle;
+	float: right;
+	padding: 0.438em 0.625em 0.438em 0.625em;
+	line-height: 1.125em;
+	cursor: pointer;
+	.xrsfbay_mobile_icon-bar + .xrsfbay_mobile_icon-bar {
+		margin-top: 0.188em;
+	}
+}
+.xrsfbay_mobile_menu {
+	*zoom: 1;
+	.xrsfbay_mobile_menutxt {
+		display: block;
+		line-height: 1.188em;
+		float: left;
+	}
+	.xrsfbay_mobile_icon {
+		float: left;
+        width: 1.125em;
+        height: 0.875em;
+		margin: 0.188em 0 0 0.438em;
+        &:before { // Firefox Mobile v42 bugfix
+            background: transparent;
+            width: 1.125em;
+            height: 0.875em;
+            display: block;
+            content: "";
+            position: absolute;
+        }
+	}
+	.xrsfbay_mobile_no-text {
+		margin: 0;
+	}
+	.xrsfbay_mobile_icon-bar {
+		display: block;
+		width: 1.125em;
+		height: 0.125em;
+		-webkit-border-radius: 1px;
+		-moz-border-radius: 1px;
+		border-radius: 1px;
+		-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	}
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+.xrsfbay_mobile_nav {
+	clear: both;
+	ul {
+		display: block;
+	}
+	li {
+		display: block;
+	}
+	.xrsfbay_mobile_arrow {
+		font-size: 0.8em;
+		margin: 0 0 0 0.4em;
+	}
+	.xrsfbay_mobile_item {
+		cursor: pointer;
+		a {
+			display: inline;
+		}
+	}
+	.xrsfbay_mobile_row {
+		display: block;
+	}
+	a {
+		display: block;
+	}
+	.xrsfbay_mobile_parent-link a {
+		display: inline;
+	}
+}
+.xrsfbay_mobile_brand {
+	float: left;
+}

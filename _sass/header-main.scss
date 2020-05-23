@@ -1,0 +1,162 @@
+header#site-header {
+    position: fixed;
+    background: transparent;
+    width: 100vw;
+    transition: .4s background ease-in-out;
+    z-index: 100000;
+    div.header-announcement {
+        flex-basis: 100%;
+        background: $brightpink;
+        font-weight: 800;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    div.inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 24px 12px;
+        height: auto;
+        transition: .4s height ease-in;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img#logo {
+                max-width: 100px;
+                transition: .4s all ease-in;
+            }    
+            h1 {
+                display: inline-block;
+                color: white;
+                font-size: 23px;
+                line-height: 1em;
+                margin: 0px;
+                width: 0px;
+                opacity: 0;
+            }
+        }
+        nav#header-nav {
+            position: absolute;
+            top: 6px;
+            right: 0;
+            div.inner {
+                > ul {
+                    display: none;
+                }
+            }
+        }
+        div#header-donate {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            list-style: none;
+            a button { transition: .4s all ease-in; }
+        }
+    }
+    &.persist {
+        background: $deepblue;
+        transition: .4s background ease-in;
+        div.inner {
+            max-height: 88px;
+            a {
+                margin-top: -40px;
+                img#logo {
+                    max-width: 100px;
+                    transition: .4s all ease-in;
+                }
+            }
+            div#header-donate {
+                a button.circle-btn { 
+                    font-size: 11px;
+                    margin: 0px;
+                    height: 72px;
+                    width: 72px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: $after-mobile) {
+    header#site-header {
+        div.inner {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img#logo {
+                    max-width: calc(240px - 24px);
+                }
+                h1 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: $tablet) {
+    header#site-header {
+        div.inner {
+            nav#header-nav {
+                position: relative;
+                top: 0px;
+                right: 0px;
+                margin: auto 60px auto auto;
+                #mobile-menu { display: none; visibility: hidden; }
+                div.inner {
+                    ul {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        list-style: none;
+                        height: 32px;
+                        li {
+                            position: relative;
+                            margin-right: 20%;
+                            height: 100%;
+                            transition: .3s all ease-in-out;
+                            a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $brightpink;
+                                font-size: 16px;
+                                font-weight: bold;
+                                letter-spacing: .5px;
+                                text-transform: uppercase;
+                                height: 100%;
+                            }
+                            &::after {
+                                position: absolute;
+                                display: block;
+                                content: "";
+                                background: $brightpink;
+                                margin-top: -18px;
+                                margin-left: -12px;
+                                height: 50%;
+                                width: 0%;
+                                z-index: -1;
+                                transition: .25s all ease-in;
+                            }
+                            &:hover {
+                                a {
+                                    color: $brightpink;
+                                }
+                                &::after {
+                                    width: calc(100% + 24px);
+                                    transition: .25s all ease-in;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            div#header-socials {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+

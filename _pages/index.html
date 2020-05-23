@@ -1,0 +1,16 @@
+---
+layout: page
+permalink: /
+---
+<section id="organizations-to_join" class="top-section">
+    <div class="inner">
+        <h2>Organizations</h2>
+        <p>The organizations below offer resources, training, and education on how to be an anti-racist white person. If you can't find one that has a chapter or training near you, consider starting one for your community.</p>
+        {% for org in site.data.organizations %}
+        <div class="organization-item">
+            <h3><a href="{{org.href}}" target="_blank">{{org.name}}<i class="fas fa-external-link-alt"></i></a></h3>
+            <span><em>Location: </em>{{org.location}}</span>
+        </div>
+        {% endfor %}
+    </div>
+</section>
