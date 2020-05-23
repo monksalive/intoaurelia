@@ -10,7 +10,7 @@ permalink: /books/
         <p>Gather some friends and start an anti-racist book club! We suggest beginning with White Fragility by Robin DiAngelo, Me and White Supremacy by Layla F. Saad, and How to Be Anti-Racist by Ibram X. Kendi.</p>
         {% for book in site.data.books %}
         <div class="book-item">
-            <img src="{{baseurl}}assets/images/books/{{book.image}}" />
+            <img src="{{site.url}}assets/images/books/{{book.image}}" />
             <h3>{{book.title}}</h3>
             <h4>__{{book.author-first}} {{book.author-last}}</h4>
             <div class="get"><a href="{{book.buy}}" target="_blank">Buy Local<i class="fas fa-external-link-alt"></i></a>

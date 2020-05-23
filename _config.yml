@@ -22,8 +22,8 @@ title: Into Aurelia
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
   A living resource for white people ready to descend into the anti-racist way of life
-baseurl: "/intoaurelia/" # the subpath of your site, e.g. /blog
-url: "https://monksalive.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://monksalive.github.io/intoaurelia" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:
 
